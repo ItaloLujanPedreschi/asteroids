@@ -38,6 +38,10 @@ def main():
       if player.overlapping(obj):
         print("Game over!")
         sys.exit()
+      for shot in shots:
+        if shot.overlapping(obj):
+          shot.kill()
+          obj.kill()
 
     for obj in drawable:
       obj.draw(screen)
