@@ -41,7 +41,7 @@ def main():
       for shot in shots:
         if shot.overlapping(obj):
           shot.kill()
-          obj.kill()
+          obj.split()
 
     for obj in drawable:
       obj.draw(screen)
