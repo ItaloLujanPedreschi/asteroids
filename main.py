@@ -1,4 +1,5 @@
 import pygame
+import sys
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
 from constants import *
@@ -30,6 +31,11 @@ def main():
     screen.fill("black")
     for obj in updatable:
       obj.update(dt)
+    for obj in asteroids:
+      if player.overlapping(obj):
+        print("Game over!")
+        sys.exit()
+
     for obj in drawable:
       obj.draw(screen)
 
