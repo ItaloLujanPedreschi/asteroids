@@ -1,1 +1,1 @@
-# asteroids
+# Asteroids in Pygame
